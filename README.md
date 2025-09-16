@@ -6,6 +6,9 @@
 #### -Changed the background color and customizing the top header font -> mainscreen.html, lines 18-25
 #### -Added an image to spice up the page -> mainscreen.html, line 32
 ## D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+#### -Mapped an AboutUsForm Spring controller in the main screen controller. -> MainScreenControllerr.java, lines 57-60
+#### -Created the controller reference in mainscreen.html for AboutUsForm.html as a centered button. Added seperation to create a navigation bar. -> mainscreen.html, line 34-38
+#### -Created AboutUsForm.html as an about us page in /src/main/resources/templates. Added CSS wrapper to match the mainscreen (lines 15-22) -> AboutUsForm.html, new file
 ## E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 ## F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 ### •  The “Buy Now” button must be next to the buttons that update and delete products.

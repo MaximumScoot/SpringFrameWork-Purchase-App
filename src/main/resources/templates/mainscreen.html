@@ -32,6 +32,11 @@
     <img th:src="@{/images/quantum_logo.jpg}" alt="Quantum Logo" class="img-fluid rounded mx-auto d-block">
     <!-- End of main header and logo picture -->
     <hr>
+    <!-- Centered Navigation link to the About Us page -->
+    <div class="text-center">
+    <a th:href="@{/ShowAboutUsForm}" class="btn btn-primary btn-sm mb-3">About Us</a>
+    </div>
+    <hr>
     <h2>Parts</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
