@@ -56,6 +56,6 @@ public class MainScreenControllerr {
     //Adding new mapping for About Us page
     @GetMapping("/ShowAboutUsForm")
     public String aboutUs(){
-        return "AboutUsForm.html";
+        return "AboutUsForm";
     }
 }
