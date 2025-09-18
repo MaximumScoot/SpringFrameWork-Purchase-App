@@ -174,6 +174,7 @@ public class AddProductController {
         return "productForm";
     }
 
+    //adding controller mapping for 'Buy now' button in mainscreen.html
     @GetMapping("/buyProduct")
     public String buyProduct(@RequestParam("productID") int theId, Model theModel) {
         ProductService productService = context.getBean(ProductServiceImpl.class);
