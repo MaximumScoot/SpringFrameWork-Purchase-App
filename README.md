@@ -7,7 +7,7 @@
 #### -Added an image to spice up the page (created reference directory = /src/main/resources/static/images/) -> mainscreen.html, line 32
 ## D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 #### -Mapped an AboutUsForm Spring controller in the main screen controller. -> MainScreenControllerr.java, lines 57-60
-#### -Created the controller reference in mainscreen.html for AboutUsForm.html as a centered button. Added seperation to create a navigation bar. -> mainscreen.html, line 34-38
+#### -Created the controller reference in mainscreen.html for AboutUsForm.html as a centered button. Added seperation to create a navigation bar. -> mainscreen.html, lines 34-38
 #### -Created AboutUsForm.html as an about us page in /src/main/resources/templates. Added CSS wrapper to match the mainscreen (lines 15-22) -> AboutUsForm.html, new file
 ## E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 #### -Added in-house parts repository to BootStrap -> BootStrapData.java, line 35.
@@ -20,6 +20,10 @@
 ### •  The “Buy Now” button must be next to the buttons that update and delete products.
 ### • The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 ### •  Display a message that indicates the success or failure of a purchase.
+#### -Added new mapping for a buy now product option that indicates either success or failure base on if the inventory is empty or not. Also reduces the inventory by 1, sets and saves the product option with the new inventory value. -> AddProductController.java, lines 177-200
+#### -Created new HTML form for failure of purchase. ->/src/resources/templates/failure.html.
+#### -Created new HTML form for success of purchase. ->/src/resources/templates/success.html.
+#### -Added new 'Buy Now' button under Products in mainscreen next to 'Update' and 'Delete' that maps to "/buyProduct" in AddProductController.java. -> mainscreen.html, line 106
 ## G.  Modify the parts to track maximum and minimum inventory by doing the following:
 ### •  Add additional fields to the part entity for maximum and minimum inventory.
 ### •  Modify the sample inventory to include the maximum and minimum fields.
