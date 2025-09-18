@@ -4,12 +4,18 @@
 ## C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 #### -Customized the shop name and alignment in HTML. -> mainscreen.html, line 31
 #### -Changed the background color and customizing the top header font -> mainscreen.html, lines 18-25
-#### -Added an image to spice up the page -> mainscreen.html, line 32
+#### -Added an image to spice up the page (created reference directory = /src/main/resources/static/images/) -> mainscreen.html, line 32
 ## D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 #### -Mapped an AboutUsForm Spring controller in the main screen controller. -> MainScreenControllerr.java, lines 57-60
 #### -Created the controller reference in mainscreen.html for AboutUsForm.html as a centered button. Added seperation to create a navigation bar. -> mainscreen.html, line 34-38
 #### -Created AboutUsForm.html as an about us page in /src/main/resources/templates. Added CSS wrapper to match the mainscreen (lines 15-22) -> AboutUsForm.html, new file
 ## E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
+#### -Added in-house parts repository to BootStrap -> BootStrapData.java, line 35.
+#### -Instantiated 5 sample inventory parts, setting values and saving to parts repository -> BootStrapData.java, lines 68-101.
+#### -Added a condition so sample parts do not overwrite existing data in the database. -> BootStrapData.java, line 65.
+#### -Instantiated 5 sample inventory products, setting values and saving to product repository -> BootStrapData.java, lines 107-120.
+#### -Added a condition so sample products do not overwrite existing data in the database. -> BootStrapData.java, line 105.
+#### -Changed and updated the database -> /src/resources/application.properties, line 6.
 ## F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 ### •  The “Buy Now” button must be next to the buttons that update and delete products.
 ### • The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
