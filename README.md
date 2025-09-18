@@ -20,7 +20,7 @@
 ### •  The “Buy Now” button must be next to the buttons that update and delete products.
 ### • The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 ### •  Display a message that indicates the success or failure of a purchase.
-#### -Added new mapping for a buy product option that indicates either success or failure base on if the inventory is empty or not. Also reduces the inventory by 1, sets and saves the product option with the new inventory value. -> AddProductController.java, lines 177-200
+#### -Added new mapping for a buy now product option that indicates either success or failure base on if the inventory is empty or not. Also reduces the inventory by 1, sets and saves the product option with the new inventory value. -> AddProductController.java, lines 177-200
 #### -Created new HTML form for failure of purchase. ->/src/resources/templates/failure.html.
 #### -Created new HTML form for success of purchase. ->/src/resources/templates/success.html.
 #### -Added new 'Buy Now' button under Products in mainscreen next to 'Update' and 'Delete' that maps to "/buyProduct" in AddProductController.java. -> mainscreen.html, line 106
