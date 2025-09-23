@@ -65,59 +65,59 @@ public class BootStrapData implements CommandLineRunner {
         if (partRepository.count() == 0) {
 
             //Instantiating 5 sample inventory parts, setting values and saving to parts repo
-            OutsourcedPart FluxCap = new OutsourcedPart();
-            FluxCap.setName("Flux Capacitor");
-            FluxCap.setInv(5);
-            FluxCap.setPrice(2000.0);
-            FluxCap.setId(1);
-            outsourcedPartRepository.save(FluxCap);
+            OutsourcedPart FluxBolts = new OutsourcedPart();
+            FluxBolts.setName("Flux Capacitor Bolts");
+            FluxBolts.setInv(400);
+            FluxBolts.setPrice(2.99);
+            FluxBolts.setId(6);
+            outsourcedPartRepository.save(FluxBolts);
 
-            OutsourcedPart LazeCannon = new OutsourcedPart();
-            LazeCannon.setName("Lazer Cannon");
-            LazeCannon.setInv(10);
-            LazeCannon.setPrice(500.0);
-            LazeCannon.setId(2);
-            outsourcedPartRepository.save(LazeCannon);
+            OutsourcedPart CannonBarrel = new OutsourcedPart();
+            CannonBarrel.setName("Lazer Cannon Barrel");
+            CannonBarrel.setInv(200);
+            CannonBarrel.setPrice(20.99);
+            CannonBarrel.setId(7);
+            outsourcedPartRepository.save(CannonBarrel);
 
-            InhousePart PlasmaDrive = new InhousePart();
-            PlasmaDrive.setName("Plasma Drive");
-            PlasmaDrive.setInv(50);
-            PlasmaDrive.setPrice(250.0);
-            PlasmaDrive.setId(3);
-            inhousePartRepository.save(PlasmaDrive);
+            InhousePart PlasmaRefill = new InhousePart();
+            PlasmaRefill.setName("Plasma Drive Refill");
+            PlasmaRefill.setInv(500);
+            PlasmaRefill.setPrice(4.99);
+            PlasmaRefill.setId(8);
+            inhousePartRepository.save(PlasmaRefill);
 
-            InhousePart PartBeam = new InhousePart();
-            PartBeam.setName("Particle Beam");
-            PartBeam.setInv(3);
-            PartBeam.setPrice(8000.0);
-            PartBeam.setId(4);
-            inhousePartRepository.save(PartBeam);
+            InhousePart ParticleRefill = new InhousePart();
+            ParticleRefill.setName("Particle Beam Refill");
+            ParticleRefill.setInv(300);
+            ParticleRefill.setPrice(24.99);
+            ParticleRefill.setId(9);
+            inhousePartRepository.save(ParticleRefill);
 
-            InhousePart PlasmaPistol = new InhousePart();
-            PlasmaPistol.setName("Plasma Pistol");
-            PlasmaPistol.setInv(200);
-            PlasmaPistol.setPrice(150.0);
-            PlasmaPistol.setId(5);
-            inhousePartRepository.save(PlasmaPistol);
+            InhousePart PlasmaMag = new InhousePart();
+            PlasmaMag.setName("Plasma Magazine");
+            PlasmaMag.setInv(1000);
+            PlasmaMag.setPrice(5.99);
+            PlasmaMag.setId(10);
+            inhousePartRepository.save(PlasmaMag);
 
         }
         //Condition so products don't duplicate when re-running the program
         if (productRepository.count() == 0) {
             //Instantiating 5 sample inventory products, setting values and saving to parts repo
-            Product FluxBolts = new Product(6,"Flux Capacitor Bolts", 2.99, 400);
-            productRepository.save(FluxBolts);
+            Product FluxCap = new Product(1,"Flux Capacitor", 2000.0, 5);
+            productRepository.save(FluxCap);
 
-            Product CannonBarrel = new Product(7,"Lazer Cannon Barrel", 20.99, 200);
-            productRepository.save(CannonBarrel);
+            Product LazeCannon = new Product(2,"Lazer Cannon", 500.0, 10);
+            productRepository.save(LazeCannon);
 
-            Product PlasmaRefill = new Product(8,"Plasma Drive Refill", 4.99, 500);
-            productRepository.save(PlasmaRefill);
+            Product PlasmaDrive = new Product(3,"Plasma Drive", 250.0, 50);
+            productRepository.save(PlasmaDrive);
 
-            Product ParticleRefill = new Product(9,"Particle Beam Refill", 24.99, 300);
-            productRepository.save(ParticleRefill);
+            Product PartBeam = new Product(4,"Particle Beam", 8000.0, 3);
+            productRepository.save(PartBeam);
 
-            Product PlasmaMag = new Product(10,"Plasma Magazine", 5.99, 1000);
-            productRepository.save(PlasmaMag);
+            Product PlasmaPistol = new Product(5,"Plasma Pistol", 150.0, 200);
+            productRepository.save(PlasmaPistol);
         }
 
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
