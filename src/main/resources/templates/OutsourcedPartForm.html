@@ -14,15 +14,29 @@
 <!-- Add hidden form field to handle update -->
     <p><input type="hidden" th:field="*{id}"/></p>
 
-<p><input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
+<p>Outsourced Part Name: <input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
 
-<p><input type="text" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
+<p>Outsourced Part Price: <input type="text" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
     <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
 
-<p><input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
+<p>Outsourced Part Inventory: <input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
     <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
 
-    <p><input type="text" th:field="*{companyName}" placeholder="Company Name" class="form-control mb-4 col-4"/></p>
+    <p>Outsourced Part Company Name: <input type="text" th:field="*{companyName}" placeholder="Company Name" class="form-control mb-4 col-4"/></p>
+    <!-- adding additional text input forms for min and max inventory so user can set inputs  -->
+    <p>Outsourced Part's Min Inventory: <input type="text" path="minInv" th:field="*{minInv}" placeholder="Min Inventory" class="form-control mb-4 col-4"/></p>
+    <p th:if="${#fields.hasErrors('minInv')}" th:errors="*{minInv}">Min Inventory Error</p>
+
+    <p>Outsourced Part's Max Inventory: <input type="text" path="maxInv" th:field="*{maxInv}" placeholder="Max Inventory" class="form-control mb-4 col-4"/></p>
+    <p th:if="${#fields.hasErrors('maxInv')}" th:errors="*{maxInv}">Max Inventory Error</p>
+    <!-- displays validator error messages if any exceptions are blocking submit -->
+    <div th:if="${#fields.hasAnyErrors()}">
+        <ul>
+            <li th:each="err: ${#fields.allErrors()}" th:text="${err}">
+
+            </li>
+        </ul>
+    </div>
 
 <p><input type="submit" value="Submit" /></p>
 </form>

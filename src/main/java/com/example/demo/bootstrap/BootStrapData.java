@@ -65,9 +65,12 @@ public class BootStrapData implements CommandLineRunner {
         if (partRepository.count() == 0) {
 
             //Instantiating 5 sample inventory parts, setting values and saving to parts repo
+            //adding a min and max value to each part
             OutsourcedPart FluxBolts = new OutsourcedPart();
             FluxBolts.setName("Flux Capacitor Bolts");
             FluxBolts.setInv(400);
+            FluxBolts.setMinInv(1);
+            FluxBolts.setMaxInv(600);
             FluxBolts.setPrice(2.99);
             FluxBolts.setId(6);
             outsourcedPartRepository.save(FluxBolts);
@@ -75,6 +78,8 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart CannonBarrel = new OutsourcedPart();
             CannonBarrel.setName("Lazer Cannon Barrel");
             CannonBarrel.setInv(200);
+            CannonBarrel.setMinInv(1);
+            CannonBarrel.setMaxInv(400);
             CannonBarrel.setPrice(20.99);
             CannonBarrel.setId(7);
             outsourcedPartRepository.save(CannonBarrel);
@@ -82,6 +87,8 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart PlasmaRefill = new InhousePart();
             PlasmaRefill.setName("Plasma Drive Refill");
             PlasmaRefill.setInv(500);
+            PlasmaRefill.setMinInv(1);
+            PlasmaRefill.setMaxInv(700);
             PlasmaRefill.setPrice(4.99);
             PlasmaRefill.setId(8);
             inhousePartRepository.save(PlasmaRefill);
@@ -89,6 +96,8 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart ParticleRefill = new InhousePart();
             ParticleRefill.setName("Particle Beam Refill");
             ParticleRefill.setInv(300);
+            ParticleRefill.setMinInv(1);
+            ParticleRefill.setMaxInv(600);
             ParticleRefill.setPrice(24.99);
             ParticleRefill.setId(9);
             inhousePartRepository.save(ParticleRefill);
@@ -96,6 +105,8 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart PlasmaMag = new InhousePart();
             PlasmaMag.setName("Plasma Magazine");
             PlasmaMag.setInv(1000);
+            PlasmaMag.setMinInv(1);
+            PlasmaMag.setMaxInv(1500);
             PlasmaMag.setPrice(5.99);
             PlasmaMag.setId(10);
             inhousePartRepository.save(PlasmaMag);
