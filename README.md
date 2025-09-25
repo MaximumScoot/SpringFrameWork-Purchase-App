@@ -50,6 +50,13 @@
 ### •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 ### •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 ### •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+#### -Added form headers for product name, price and inventory. -> productForm.html, lines 17, 19, 22.
+#### -Added min and max inventory fields for available and associated parts on the product form. -> productForm.html, lines 48, 49, 70, 71.
+#### -Added min and max inventory headers for Available Parts and Associated parts. -> productForm.html, lines 40, 41, 64, 65.
+#### -Updated database version. -> application.properties, line 6.
+#### -Added a condition to EnufPartsValidator that would also throw an error message when associated part would go below the part's minimum inventory. -> EnufPartsValidator.java, lines 38-40.
+#### -Validators for updating/adding parts going below minimum inventory already added previously.
+#### -Validators for updating/adding parts going above maximum inventory already added previously.
 ## I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 ## J.  Remove the class files for any unused validators in order to clean your code.
 
