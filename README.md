@@ -58,5 +58,7 @@
 #### -Validators for updating/adding parts going below minimum inventory already added previously.
 #### -Validators for updating/adding parts going above maximum inventory already added previously.
 ## I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+#### -Deleted unused validator for cleanup. ->/src/main/java/com/example/demo/validators/DeletePartValidator.java
+#### -Deleted unused validator form for cleanup. ->/src/main/java/com/example/demo/validators/ValidDeletePart.java
 ## J.  Remove the class files for any unused validators in order to clean your code.
 
